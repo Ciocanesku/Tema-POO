@@ -30,7 +30,7 @@ public:
         return titlu;
     }
     void settitlu(char* titlu_)
-    {delete titlu;
+    {delete []titlu;
         size_t len=strlen(titlu_);
         titlu=new char[len + 1];
         strcpy(titlu, titlu_);
@@ -43,7 +43,7 @@ public:
 
     void setautor(char* autor_)
     {
-        delete autor;
+        delete [] autor;
         size_t len = strlen(autor_);
         autor = new char [len+1];
         strcpy(autor, autor_);
@@ -155,14 +155,15 @@ public:
         }
 
     }
+    Librarie(const Librarie &l)
+    {numar_carti=l.numar_carti;
+        c=new Carte[numar_carti];
+        for(int i=0;i<numar_carti;i++)
+            c[i]=l.c[i];
+    }
     ~Librarie()
     {
-        int i;
-        for(i=0;i<numar_carti;i++) {
-            delete c[i].titlu;
-            delete c[i].autor;
-        }
-        delete c;
+        delete []c;
     }
 
     int get_nrcarti() const
@@ -194,7 +195,7 @@ public:
         return -1;
     }
 
-    Librarie& operator+=(Carte &rhs)
+    Librarie& operator+=(const Carte &rhs)
     {
         Carte *bk;
         bk= new Carte [numar_carti];
