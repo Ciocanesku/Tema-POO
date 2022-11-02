@@ -21,8 +21,8 @@ public:
     };
     ~Carte()
     {
-        delete titlu;
-        delete autor;
+        delete [] titlu;
+        delete [] autor;
     }
 
     ///   SET/GET TITLU
