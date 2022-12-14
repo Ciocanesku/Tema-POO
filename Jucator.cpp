@@ -7,6 +7,7 @@
 #include <string>
 #include <vector>
 #include <memory>
+#include <map>
 
 
 Jucator::Jucator(std::string n, std::string p,int v,std::string poz, int nt, int sal):Persoana(n,p,v),pozitie(poz),numar_tricou(nt),salariu(sal)
@@ -75,8 +76,16 @@ bool Jucator::operator!=(const Jucator& rMembr)
 }
 void Jucator::print(std::ostream &os) const  {
     Persoana::print(os);
-    os << "\n" <<"Pozitie: "<< pozitie << "\n"<<"Salariu: "<< salariu << "\n";
+    os << "\n" <<"Pozitie: "<< pozitie << "\n"<<"Salariu: "<< salariu << "\n"<<"Numar tricou:"<<numar_tricou<<std::endl;
 
+}
+Jucator &Jucator::operator=(const Jucator &rhs)
+{
+    Persoana::operator=(rhs);
+    pozitie=rhs.pozitie;
+    numar_tricou=rhs.numar_tricou;
+    salariu=rhs.salariu;
+    return *this;
 }
 
 PersoanaType Jucator::PType() const {return PersoanaType::Jucator;}

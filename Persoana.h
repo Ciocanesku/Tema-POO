@@ -29,6 +29,7 @@ public:
     friend std::istream& operator>>(std::istream& is, Persoana& n);
     bool operator==(const Persoana &crt) const;
     bool operator!=(const Persoana &crt) const;
+    Persoana& operator=(const Persoana &rhs);
     ///ALTE FUNCTII
     virtual void print(std::ostream& os) const;
     virtual PersoanaType PType() const=0;

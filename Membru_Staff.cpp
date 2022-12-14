@@ -55,5 +55,11 @@ void Membru_Staff::print(std::ostream &os) const {
 
 }
 
+Membru_Staff &Membru_Staff::operator=(const Membru_Staff &rhs) {
+    Persoana::operator=(rhs);
+    rol=rhs.rol;
+    salariu=rhs.salariu;
+    return *this;
+}
 PersoanaType Membru_Staff::PType() const {return PersoanaType::Membru_Staff;}
 ;

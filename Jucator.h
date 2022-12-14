@@ -28,6 +28,7 @@ public:
     friend std::istream& operator>>(std::istream& is, Jucator& c);
     bool operator==(const Jucator& rMembr);
     bool operator!=(const Jucator& rMembr);
+    Jucator& operator=(const Jucator&);
     ///ALTE FUNCTII
     using Persoana::print;
     void print(std::ostream &os) const override;

@@ -25,6 +25,7 @@ public:
     friend std::istream& operator>>(std::istream& is, Membru_Staff& c);
     bool operator==(const Membru_Staff& rMembr);
     bool operator!=(const Membru_Staff& rMembr);
+    Membru_Staff &operator=(const Membru_Staff &rhs);
     ///ALTELE
     using Persoana::print;
     void print(std::ostream &os) const override;

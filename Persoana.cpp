@@ -80,5 +80,14 @@ void Persoana::print(std::ostream &os) const {
     os<<"Nume:"<<nume<<std::endl<<"Prenume:"<<prenume<<" \n"<<"Varsta:" <<varsta;
 
 }
+Persoana& Persoana::operator=(const Persoana &rhs) {
+    if (this != &rhs) {
+        nume = rhs.nume;
+        prenume=rhs.prenume;
+        varsta = rhs.varsta;
+    }
+    return *this;
+}
+
 Persoana::~Persoana()=default;
 
