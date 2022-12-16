@@ -31,7 +31,7 @@ public:
     int get_nrjucatori() const;
     int get_nrstaff() const;
     int get_nrpers() const;
-    void af_pers();
+    void af_pers() const;
     static std::vector<std::shared_ptr <Jucator>> FindAllJucator();
     static std::shared_ptr<Persoana> af_dupa_nume(const std::string& name);
     static std::vector<std::shared_ptr<Membru_Staff>> FindAllStaff();

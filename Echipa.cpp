@@ -58,7 +58,7 @@ int Echipa::get_nrstaff() const {
 }
 
 
-void Echipa::af_pers() {
+void Echipa::af_pers() const {
     for(auto &Persoana: p)
     {
         std::cout<<Persoana<<std::endl;

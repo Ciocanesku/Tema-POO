@@ -40,13 +40,13 @@ std::string Jucator::get_pozitie()
 };
 
 
-int Jucator::get_numar_tricou()
+int Jucator::get_numar_tricou() const
 {
 
     return numar_tricou;
 }
 
-int Jucator::get_salariu()
+int Jucator::get_salariu() const
 {
     return salariu;
 };

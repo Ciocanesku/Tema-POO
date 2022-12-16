@@ -22,8 +22,8 @@ public:
     void set_numar_tricou(int nr);
     void set_salariu(int nr);
     std::string get_pozitie();
-    int get_numar_tricou();
-    int get_salariu();
+    int get_numar_tricou() const;
+    int get_salariu() const;
     ///OPERATORI
     friend std::istream& operator>>(std::istream& is, Jucator& c);
     bool operator==(const Jucator& rMembr);
