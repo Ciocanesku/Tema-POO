@@ -39,12 +39,12 @@ std::istream& operator>>(std::istream& is, Membru_Staff& n) {
 
 
 }
-bool Membru_Staff::operator==(const Membru_Staff& rMembr)
+bool Membru_Staff::operator==(const Membru_Staff& rMembr) const
 {
 
     return (Persoana::operator==(rMembr)) && (salariu == rMembr.salariu) && rol==rMembr.rol;
 }
-bool Membru_Staff::operator!=(const Membru_Staff& rMembr)
+bool Membru_Staff::operator!=(const Membru_Staff& rMembr) const
 {
 
     return !(*this==rMembr);

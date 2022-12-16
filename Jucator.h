@@ -26,8 +26,8 @@ public:
     int get_salariu() const;
     ///OPERATORI
     friend std::istream& operator>>(std::istream& is, Jucator& c);
-    bool operator==(const Jucator& rMembr);
-    bool operator!=(const Jucator& rMembr);
+    bool operator==(const Jucator& rMembr) const;
+    bool operator!=(const Jucator& rMembr) const;
     Jucator& operator=(const Jucator&);
     ///ALTE FUNCTII
     using Persoana::print;
